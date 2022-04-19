@@ -1,0 +1,20 @@
+npm -g install typescript  --> Instala de forma global antes de iniciar un proyecto
+
+Ambiente de desarrollo:
+1) Si al instalar typescript presenta problemas con acceso denegado, puede instalar typescript de manera local con:
+npx npm install typescript
+
+2) Si tiene problemas para ejecutar el compilador de typescript, puede ejectuar los 2 siguientes comandos en su terminal de visual studio code:
+Set-ExecutionPolicy RemoteSigned -Scope CurrentUser
+get-ExecutionPolicy -list
+
+
+
+tsc --init  --> Inicializa un proyecto en typescript, se lo debe correr en el terminal.
+
+tsc scr/main.ts (direccion del archivo) --> Traspilar el codigo a JS
+
+tsc -w --> Traspila todo el codigo de TS a JS
+
+taiwildcss --> opcion para remplazar a bootstrap
+DaysiUI --> Una envultura para taiwildcss.
