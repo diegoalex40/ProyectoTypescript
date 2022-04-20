@@ -9,14 +9,36 @@
     <section class="max-w-2xl mx-auto rounded-lg shadow-2xl border-4">
         <p class="text-center font-bold my-4">INSCRIPCIÓN DE <span class="text-primary"> ESTUDIANTES</span></p>
         <div class="rounded-lg shadow-2xl p-2 border-4 grid grid-col-2">
+            <p>DNI</p>
+            <input class="input input-primary" type="text" id="dni">
             <p>NOMBRE COMPLETO</p>
             <input class="input input-primary" type="text" id="nombre">
             <p>SEMESTRE</p>
             <input class="input input-primary" type="text" id="semestre">
             <button class="btn btn-primary" onclick="addStudent()">GUARDAR</button>
-        </div>
-        
+        </div> 
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="max-w-2xl mx-auto rounded-lg shadow-2xl border-4">
+        <p class="text-center font-bold my-4">INSCRIPCIÓN DE <span class="text-secondary"> DOCENTES</span></p>
+        <div class="rounded-lg shadow-2xl p-2 border-4 grid grid-col-2">
+            <p>DNI</p>
+            <input class="input input-secondary" type="text" id="dniTeacher">
+            <p>NOMBRE COMPLETO</p>
+            <input class="input input-secondary" type="text" id="fullNameTeacher">
+            <p>AREA DE CONOCIMIENTO</p>
+            <select class="input input-secondary" id="areaTeacher">
+                <option value="Arte">Art</option>
+                <option value="Software">Software</option>
+                <option value="Marketing">Marketing</option>
+            </select>
+            <button class="btn btn-secondary" onclick="addTeacher()">GUARDAR</button>
+        </div> 
     </section>
 </body>
+<!--Agregar en caso de error para exportaciones-->
+<script>let exports = {};</script>
 <script src="/built/main.js"></script>
 </html>

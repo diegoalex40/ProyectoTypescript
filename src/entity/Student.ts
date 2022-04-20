@@ -1,5 +1,6 @@
 import { Person } from "./person";
 
 export interface Student extends Person {
-    level : number
+    level : number,
+    dni : number
 }
