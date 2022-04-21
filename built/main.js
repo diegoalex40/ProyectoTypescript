@@ -3,6 +3,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
 let students = [];
 let teachers = [];
 let activities = [];
+let gradebookSetups = [];
 var Course;
 (function (Course) {
     Course["FrontEnd"] = "FrontEnd";

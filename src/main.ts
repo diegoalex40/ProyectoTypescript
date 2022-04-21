@@ -1,10 +1,12 @@
 import { Student } from "./entity/Student";
 import { Teacher } from "./entity/Teacher";
-import { Activity } from "./entity/Activity"
-
+import { Activity } from "./entity/Activity";
+import {GradebookSetup} from "./entity/GradebookSetup";
+ 
 let students: Student[] = [];
 let teachers: Teacher[] = [];
 let activities: Activity[] = [];
+let gradebookSetups:GradebookSetup[] = [];
 
 enum Course {
     FrontEnd = "FrontEnd",
