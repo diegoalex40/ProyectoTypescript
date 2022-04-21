@@ -1,8 +1,18 @@
 import { Student } from "./entity/Student";
 import { Teacher } from "./entity/Teacher";
+import { Activity } from "./entity/Activity"
 
 let students: Student[] = [];
 let teachers: Teacher[] = [];
+let activities: Activity[] = [];
+
+enum Course {
+    FrontEnd = "FrontEnd",
+    BackEnd = "BackEnd",
+    DataBase = "DataBase",
+    Ux = "Ux",
+    Ui = "Ui"
+}
 
 function addStudent (): void{
     //El simbolo de ! nos ayuda a decir: "Yo me hago cargo de que si algo pasa lo soluciono"
@@ -30,6 +40,38 @@ function addTeacher (): void{
     console.table(teachers);
 }
 
+function addActivity (): void{
+    let currentActivity: Activity =
+    {
+        name: readFromHtml("nameActivity")
+    }
+
+    activities.push(currentActivity);
+    console.table(activities);
+}
+
+
 function readFromHtml(id: string): string {
     return (<HTMLInputElement>document.getElementById(id)).value
 }
+
+//funciona para llenar automaticamente el las opciones del select
+function initSelect():void {
+    //Crea la variable para guardar el los elementos del select desde el DOM
+    let gradebookCourse = document.getElementById("GradebookSelect") as HTMLSelectElement;
+
+    //Object nos permite crear un array desde el enumerado Course con su propiedad Value
+    let courses = Object.values(Course);
+    courses.forEach(
+      //Esta es la estrucutra basica de una funcion flecha o lambda
+        (value) =>  {
+            let option = document.createElement("option");
+            option.value = value;
+            option.text = value;
+            gradebookCourse.add(option);
+        }
+    )
+
+}
+
+initSelect();

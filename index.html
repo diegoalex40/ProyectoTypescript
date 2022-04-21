@@ -15,7 +15,7 @@
             <input class="input input-primary" type="text" id="nombre">
             <p>SEMESTRE</p>
             <input class="input input-primary" type="text" id="semestre">
-            <button class="btn btn-primary" onclick="addStudent()">GUARDAR</button>
+            <button class="btn btn-primary mt-2" onclick="addStudent()">GUARDAR</button>
         </div> 
     </section>
 
@@ -34,9 +34,40 @@
                 <option value="Software">Software</option>
                 <option value="Marketing">Marketing</option>
             </select>
-            <button class="btn btn-secondary" onclick="addTeacher()">GUARDAR</button>
+            <button class="btn btn-secondary mt-2" onclick="addTeacher()">GUARDAR</button>
         </div> 
     </section>
+
+    <div class="divider"></div>
+
+    <section class="max-w-2xl mx-auto rounded-lg shadow-2xl border-4">
+        <p class="text-center font-bold my-4">DESCRIPCION DE <span class="text-primary"> ACTIVIDADES</span></p>
+        <div class="rounded-lg shadow-2xl p-2 border-4 grid grid-col-2">
+            <p>NOMBRE DE LA ACTIVIDAD</p>
+            <input class="input input-secondary" type="text" id="nameActivity">
+            <button class="btn btn-secondary mt-2" onclick="addActivity()">GUARDAR</button>
+        </div> 
+    </section>
+
+    <div class="divider"></div>
+
+    <section class="max-w-2xl mx-auto rounded-lg shadow-2xl border-4">
+        <p class="text-center font-bold my-4">CONFIGURACION DEL <span class="text-primary"> LIBRO DE CALIFICACIONES</span></p>
+        <div class="rounded-lg shadow-2xl p-2 border-4 grid grid-col-2">
+            <p>VALUE</p>
+            <input class="input input-primary" type="text" id="valueGradebook">
+            <p>CURSO</p>
+            <select class="input input-prumary" id="GradebookSelect">
+
+            </select>
+            <p>ACTIVIDAD</p>
+            <input class="input input-primary" type="text" id="valueGradebook">
+            <p>NOTA MAXIMA</p>
+            <input class="input input-primary" type="text" id="valueGradebook">
+            <button class="btn btn-primary mt-2" onclick="addActivity()">GUARDAR</button>
+        </div> 
+    </section>
+
 </body>
 <!--Agregar en caso de error para exportaciones-->
 <script>let exports = {};</script>
